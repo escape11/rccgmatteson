@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rccgmatteson</title>
+    <title>rccgmatteson</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About",root_path %>
+     <%= link_to "Pastors_Desk", root_path %>
+    <%= link_to "Gallery",root_path %>
+     <%= link_to "Interact", root_path %>
+    <%= link_to "Contact",root_path %>
     <%= yield %>
   </body>
 </html>
