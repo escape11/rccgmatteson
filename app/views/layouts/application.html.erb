@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>rccgmatteson</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>House of Praise | rccgmatteson</title>
+   <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
   </head>
 
   <body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "About",root_path %>
-     <%= link_to "Pastors_Desk", root_path %>
-    <%= link_to "Gallery",root_path %>
-     <%= link_to "Interact", root_path %>
-    <%= link_to "Contact",root_path %>
+
+    <!-- Navigation Bar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+      <%= image_tag("rccglogo.png", class: "img-responsive", id: "navbar-logo") %>
+        <%= link_to "House of Praise", root_path, class: "navbar-brand" %>
+
+        <ul class="navbar  navbar-inverse bg-inverse">
+          <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "About", About_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Contact", Contact_path, class: "nav-link" %></li>
+
+     
+          
+         
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
     <%= yield %>
+    
+    <!-- Footer -->
+    
+      <div class="footer">
+        <p class="m-0 text-center text-white">Copyright &copy; The Redeemed Christian Church of God - Matteson 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
   </body>
 </html>
