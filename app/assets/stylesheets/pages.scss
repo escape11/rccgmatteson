@@ -39,7 +39,22 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+div.example {
+  background-color: lightgrey;
+  padding: 20px;
+}
 
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
 .portfolio-item {
   margin-bottom: 30px;
 }
